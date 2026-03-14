@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevAssistant | Premium AI Coding Companion</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Highlight.js for Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  
+  <!-- Marked.js for Markdown Rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark-theme">
+  <div class="main-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <button id="new-chat-btn" class="primary-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span>New Chat</span>
+        </button>
+      </div>
+      <div class="sidebar-content">
+        <div class="history-label">Recent Conversations</div>
+        <div id="chat-history-list" class="history-list">
+          <div class="history-item active">Current Session</div>
+        </div>
+      </div>
+      <div class="sidebar-footer">
+        <div class="user-status">
+          <div class="status-dot"></div>
+          <span>API Connected</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="app-container">
+      <header>
+        <div class="header-left">
+          <span class="icon-gradient">⚡</span>
+          <h1>DevAssistant <span class="version-tag">Pro</span></h1>
+        </div>
+        <div class="header-right">
+          <button id="clear-btn" title="Clear Chat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="chat-box" class="chat-box"></main>
+
+      <footer class="input-area">
+        <form id="chat-form">
+          <div class="textarea-wrapper">
+            <textarea id="user-input" placeholder="Apa yang ingin Anda bangun hari ini?..." rows="1" required></textarea>
+          </div>
+          <button type="submit" id="send-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
